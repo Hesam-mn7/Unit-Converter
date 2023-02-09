@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity4"
+    android:background="#9AA5E1">
+
+    <TextView
+        android:id="@+id/tvclock"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="World Clock"
+        android:padding="10dp"
+        android:background="#1D37C5"
+        android:textColor="#fff"
+        android:textSize="50dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/clock"
+        android:layout_marginRight="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tventer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please enter Iranian time :"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvclock"
+        app:layout_constraintBottom_toTopOf="@+id/tvCovert"/>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tventer"
+        android:paddingLeft="10dp">
+
+        <EditText
+            android:id="@+id/etHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Hour"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:inputType="number"/>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/etHour"
+            android:text=": "
+            android:paddingTop="20dp"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etMinute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Minute"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:inputType="number"
+            android:layout_toRightOf="@id/tv1"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnConvertclock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:background="@drawable/border2"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl"/>
+
+    <TextView
+        android:id="@+id/tvLondon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvertclock"
+        app:layout_constraintBottom_toTopOf="@id/tvLosangeles"
+        android:text="London (United Kingdom) : "
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tvLosangeles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvLondon"
+        app:layout_constraintBottom_toTopOf="@id/tvSeoul"
+        android:text="Los Angeles (United States) : "
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tvSeoul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvLosangeles"
+        app:layout_constraintBottom_toTopOf="@id/tvParis"
+        android:text="Seoul (South Korea) : "
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tvParis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvSeoul"
+        app:layout_constraintBottom_toTopOf="@id/tvRiodejaneiro"
+        android:text="Paris (France) : "
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tvRiodejaneiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvParis"
+        app:layout_constraintBottom_toTopOf="@id/tvNewyork"
+        android:text="Rio de Janeiro (Brazil) : "
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tvNewyork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvRiodejaneiro"
+        app:layout_constraintBottom_toTopOf="@id/tvSydney"
+        android:text="New York (United States) : "
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tvSydney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewyork"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Sydney (Australia) : "
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:background="#EFD483">
+
+    <TextView
+        android:id="@+id/tvWeight"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#D8A50E"
+        android:text="Weight"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textSize="50dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/tiValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter a Value :"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textStyle="bold"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/tvWeight"
+        app:layout_constraintBottom_toTopOf="@+id/tvCovert"/>
+
+    <TextView
+        android:id="@+id/tvCovert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert from :"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tiValue"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The result of conversion :  "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/tiValue"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/rg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvCovert"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbGram"
+        android:textSize="20dp"
+        android:textColorHint="#000"
+        android:textStyle="bold"
+        android:text="Gram"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbKilogram"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="Kilogram"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbOunce"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="Ounce"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbTon"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Ton"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbPound"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="Pound"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbCarat"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="Carat"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbGrain"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:text="Grain"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbStone"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:text="Stone"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvResultGram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 g"
+        android:textColor="#000"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/tvResultKilogram"
+        app:layout_constraintStart_toStartOf="@id/tvResult"
+        app:layout_constraintTop_toBottomOf="@id/tvResult" />
+
+    <TextView
+        android:id="@+id/tvResultKilogram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="0 kg"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResultGram"
+        app:layout_constraintBottom_toTopOf="@id/tvResultOunce"
+        app:layout_constraintStart_toStartOf="@id/tvResult"/>
+
+    <TextView
+        android:id="@+id/tvResultOunce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="0 oz"
+        app:layout_constraintTop_toBottomOf="@id/tvResultKilogram"
+        app:layout_constraintStart_toStartOf="@id/tvResult"
+        app:layout_constraintBottom_toTopOf="@id/tvResultTon"/>
+
+    <TextView
+        android:id="@+id/tvResultTon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="0 t"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResultOunce"
+        app:layout_constraintStart_toStartOf="@id/tvResult"
+        app:layout_constraintBottom_toTopOf="@id/tvResultPound"/>
+
+    <TextView
+        android:id="@+id/tvResultPound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:text="0 lb"
+        app:layout_constraintTop_toBottomOf="@id/tvResultTon"
+        app:layout_constraintStart_toStartOf="@id/tvResult"
+        app:layout_constraintBottom_toTopOf="@id/tvResultCarat"/>
+
+    <TextView
+        android:id="@+id/tvResultCarat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:text="0 ct"
+        app:layout_constraintTop_toBottomOf="@id/tvResultPound"
+        app:layout_constraintStart_toStartOf="@id/tvResultGrain"/>
+
+    <TextView
+        android:id="@+id/tvResultGrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:text="0 gr"
+        app:layout_constraintTop_toBottomOf="@id/tvResultCarat"
+        app:layout_constraintStart_toStartOf="@id/tvResult"/>
+
+    <TextView
+        android:id="@+id/tvResultStone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:text="0 st"
+        app:layout_constraintTop_toBottomOf="@id/tvResultGrain"
+        app:layout_constraintStart_toStartOf="@id/tvResult"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/weight3"
+        android:layout_marginRight="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

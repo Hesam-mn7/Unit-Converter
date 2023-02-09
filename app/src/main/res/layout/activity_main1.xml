@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#91CC94"
+    tools:context=".MainActivity1">
+
+    <TextView
+        android:id="@+id/tvdistance"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Distance"
+        android:padding="10dp"
+        android:background="#327335"
+        android:textColor="#fff"
+        android:textSize="60dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+    <EditText
+        android:id="@+id/etValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter a Value :"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textStyle="bold"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/tvdistance"
+        app:layout_constraintBottom_toTopOf="@+id/tvCovert"/>
+
+    <TextView
+        android:id="@+id/tvCovert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert from :"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/etValue"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The result of conversion :  "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/etValue"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvCovert"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbMeter"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:text="Meter"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbCentimeter"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="Centimeter"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbMillimetre"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="Millimetre"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbkilometre"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="Kilometre"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbMile"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:text="Mile"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbYard"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Yard"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbInch"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:text="Inch"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbFoot"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Foot"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvResultMeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 m"
+        android:textColor="#000"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/tvResultCentimeter"
+        app:layout_constraintStart_toStartOf="@id/tvResult"
+        app:layout_constraintTop_toBottomOf="@id/tvResult" />
+
+    <TextView
+        android:id="@+id/tvResultCentimeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="0 cm"
+        app:layout_constraintTop_toBottomOf="@id/tvResultMeter"
+        app:layout_constraintBottom_toTopOf="@id/tvResultMillimetre"
+        app:layout_constraintStart_toStartOf="@id/tvResult"/>
+
+    <TextView
+        android:id="@+id/tvResultMillimetre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:text="0 mm"
+        app:layout_constraintTop_toBottomOf="@id/tvResultCentimeter"
+        app:layout_constraintStart_toStartOf="@id/tvResult"
+        app:layout_constraintBottom_toTopOf="@id/tvResultkilometre"/>
+
+    <TextView
+        android:id="@+id/tvResultkilometre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="0 km"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResultMillimetre"
+        app:layout_constraintStart_toStartOf="@id/tvResult"
+        app:layout_constraintBottom_toTopOf="@id/tvResultMile"/>
+
+    <TextView
+        android:id="@+id/tvResultMile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="0 mi"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResultkilometre"
+        app:layout_constraintStart_toStartOf="@id/tvResult"
+        app:layout_constraintBottom_toTopOf="@id/tvResultYard"/>
+
+    <TextView
+        android:id="@+id/tvResultYard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="0 yd"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResultMile"
+        app:layout_constraintStart_toStartOf="@id/tvResult"
+        app:layout_constraintBottom_toTopOf="@id/tvResultInch"/>
+
+    <TextView
+        android:id="@+id/tvResultInch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:textColor="#000"
+        android:text="0 in"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResultYard"
+        app:layout_constraintStart_toStartOf="@id/tvResult"/>
+
+    <TextView
+        android:id="@+id/tvResultFoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:textColor="#000"
+        android:text="0 ft"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResultInch"
+        app:layout_constraintStart_toStartOf="@id/tvResult"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/distance"
+        android:layout_marginRight="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
